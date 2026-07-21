@@ -1,0 +1,22 @@
+{
+  "name": "x402-scrape-api",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "gen-wallet": "node scripts/gen-wallet.js"
+  },
+  "dependencies": {
+    "@x402/core": "latest",
+    "@x402/evm": "latest",
+    "@x402/express": "latest",
+    "@x402/extensions": "latest",
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.0",
+    "express": "^4.21.0",
+    "pdf-parse": "^2.4.5",
+    "playwright": "^1.61.1",
+    "viem": "^2.21.0"
+  }
+}

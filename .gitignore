@@ -1,0 +1,11 @@
+node_modules/
+.env
+.env.*
+*.pid
+*.log
+payments.log
+money_loop_state.json
+dm_swarm_state.json
+PUBLIC_URL.txt
+lt.log
+tunnel*.log

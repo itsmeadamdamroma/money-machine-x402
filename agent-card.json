@@ -1,0 +1,23 @@
+{
+  "name": "MoneyMachine x402 Suite",
+  "description": "Agent-payable APIs on Base USDC: GigRadar freelance/bounty search, LightHouse-lite web vitals, Axe-lite a11y, CrawlJudge, DocClerk PDF extract, HTML scrape. Public pages only.",
+  "url": "https://REPLACE_PUBLIC",
+  "provider": {"organization": "MoneyMachine", "url": "https://github.com/itsmeadamdamroma"},
+  "version": "2.0.0",
+  "documentationUrl": "https://github.com/itsmeadamdamroma/money-machine-x402",
+  "capabilities": {"streaming": false, "pushNotifications": false},
+  "defaultInputModes": ["application/json", "text/plain"],
+  "defaultOutputModes": ["application/json"],
+  "skills": [
+    {"id": "gigradar", "name": "GigRadar", "description": "Search Superteam, r/forhire, HN hiring, Freelancer public gigs", "tags": ["freelance","bounty","jobs"], "examples": ["Find Playwright gigs over $50"]},
+    {"id": "lighthouse", "name": "LightHouse-lite", "description": "Playwright Core Web Vitals proxy scores", "tags": ["seo","performance"]},
+    {"id": "docclerk", "name": "DocClerk-lite", "description": "Public PDF URL to invoice fields", "tags": ["pdf","invoice"]},
+    {"id": "crawljudge", "name": "CrawlJudge", "description": "robots+ToS scrape safety score", "tags": ["robots","compliance"]},
+    {"id": "scrape", "name": "HTML scrape", "description": "Public page texts and links", "tags": ["scrape"]}
+  ],
+  "x402": {
+    "network": "eip155:8453",
+    "payTo": "0x5Cc3c4E5020Ec3D81E392658eFe7b27966872CE7",
+    "prices": {"demo":"$0.01","scrape":"$0.05","gigradar":"$0.15","lighthouse":"$0.12","axe":"$0.08","crawljudge":"$0.03","docclerk":"$0.25"}
+  }
+}
