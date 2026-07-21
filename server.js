@@ -121,11 +121,14 @@ const app = express();
 app.use(express.json({ limit: "512kb" }));
 
 
-app.get("/.well-known/agent.json", (_req, res) => {
-  res.sendFile(path.join(process.cwd(), "agent-card.json"));
-});
-app.get("/agent-card.json", (_req, res) => {
-  res.sendFile(path.join(process.cwd(), "agent-card.json"));
+app.get(["/agent-card.json", "/.well-known/agent.json"], (_req, res) => {
+  try {
+    const card = JSON.parse(fs.readFileSync(path.join(process.cwd(), "agent-card.json"), "utf8"));
+    if (process.env.PUBLIC_BASE) card.url = process.env.PUBLIC_BASE;
+    res.json(card);
+  } catch (e) {
+    res.status(500).json({ error: String(e.message || e) });
+  }
 });
 
 app.get("/health", (_req, res) => {
